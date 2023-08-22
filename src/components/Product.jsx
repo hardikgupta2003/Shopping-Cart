@@ -19,8 +19,7 @@ const Product = ({item}) => {
 
   }
 
-  return <div className="flex flex-col items-center justify-between 
-  hover:scale-110 transition duration-300 ease-in gap-3 p-4 mt-10 ml-5 rounded-xl outline">
+  return <div className="group hover:scale-110 transition duration-300 ease-in flex flex-col items-center justify-between shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] hover:shadow-[0px_0px_95px_53px_#00000024] gap-3 p-4 mt-10 ml-5  rounded-xl">
     <div>
       <p className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">{item.title}</p></div>
       <div>
