@@ -24,7 +24,7 @@ const Product = ({item}) => {
     <div>
       <p className="text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1">{item.title}</p></div>
       <div>
-        <p className="w-40 text-gray-400 font-normal text-[10px] text-left">{item.desc}</p>
+        <p className="w-40 text-gray-400 font-normal text-[10px] text-left">{item.description.split(" ").slice(0,10).join(" ") + "..."}</p>
         </div>
     <div className="h-[180px]">
       <img className="h-full w-full " src={item.image} alt="" />

@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
           <NavLink to="/cart">
-            <div className=""><FaShoppingCart className="text-2xl"/>
+            <div className="relative"><FaShoppingCart className="text-2xl"/>
             {
                     cart.length > 0 &&
                     <span

@@ -12,25 +12,25 @@ const Cart = () => {
   useEffect( () => {
     setTotalAmount( cart.reduce( (acc, curr) => acc + curr.price,0) );
   }, [cart])
-  return (<div>
+  return (<div className="">
     {
       cart.length > 0 ?
       (
-        <div>
+        <div className="flex justify-center gap-3">
           
-          <div className="">
+          <div className="w-[490px]">
             {
               cart.map((item,index)=>{
                 return <CartItem key={item.id} item={item} itemIndex={index} />
               })
             }
           </div>
-          <div className="">
-            <div className="">
-              <div className="">Your Cart</div>
-              <div className="">Summary</div>
+          <div className="flex flex-col p-5 gap-5 my-14 h-full justify-between">
+            <div className="flex flex-col gap-5">
+              <div className="text-green-800 font-semibold text-xl">Your Cart</div>
+              <div className="text-green-700 uppercase -mt-5 font-semibold text-5xl">Summary</div>
               <p>
-                <span>
+                <span className="text-gray-700 font-semibold text-xl">
                   Total Items: {cart.length}
                 </span>
               </p>
