@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import toast from 'react-hot-toast'
 import {add,remove} from '../redux/Slices/cartSlice'
@@ -32,7 +31,7 @@ const Product = ({item}) => {
         <div><p className="text-green-600 font-semibold">${item.price}</p></div>
     
     {
-      cart.some((i)=> i.id == item.id) ? (<button
+      cart.some((i)=> i.id === item.id) ? (<button
         className="text-gray-700 border-2 border-gray-700 rounded-full font-semibold 
         text-[12px] p-1 px-3 uppercase 
         hover:bg-gray-700
